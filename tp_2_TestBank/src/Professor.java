@@ -1,11 +1,8 @@
-
-
-
 public class Professor
 {
 	private char ProID;
 	private String ProName;
-	private String Class_name;
+	private String Class_ID;
 	
 
     Professor(char P_ID, String P_Name,String C_name)
@@ -13,7 +10,7 @@ public class Professor
     	
     	this.ProID = P_ID;
     	this.ProName = P_Name;
-    	this.Class_name = C_name;
+    	this.Class_ID = C_name;
     	
 	}
 	
@@ -23,8 +20,8 @@ public class Professor
 	public void setProName(String P_Name) {
 	     ProName = P_Name;
 	}
-	public void setClass_name(String C_name) {
-		Class_name = C_name;
+	public void setClass_ID(String C_name) {
+		Class_ID = C_name;
 	}
 	
 	
@@ -35,8 +32,8 @@ public class Professor
 	public String P_Name() {
 		return ProName;
 	}
-	public String getClass_name() {
-		return Class_name;
+	public String getClass_ID() {
+		return Class_ID;
 	}
 	
 

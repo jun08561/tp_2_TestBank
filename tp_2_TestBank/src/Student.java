@@ -5,8 +5,9 @@ public class Student
 	private char StuID;
 	private String StuName;
 	private int StuGrade;
-	private String Class_name;
-	private String Pro_name;
+	private String Class_ID;
+	
+	
 	
 
     Student(char StdId, String SName, int StdGrade,String C_name, String P_name)
@@ -14,43 +15,73 @@ public class Student
     	this.StuGrade = StdGrade;
     	this.StuID = StdId;
     	this.StuName = SName;
-    	this.Class_name = C_name;
-    	this.Pro_name =P_name;
+    	this.Class_ID = C_name;
+    	
     	
 	}
-	
-	public void setStuID(char StdId) {
-		StuID = StdId;
-	}
-	public void setStuGrade(char StdGrade) {
-		StuGrade = StdGrade;
-	}
-	public void setStuName(String SName) {
-		StuName = SName;
-	}
-	public void setClass_name(String C_name) {
-		Class_name = C_name;
-	}
-	public void setPro_name(String P_name) {
-		Pro_name = P_name;
-	}
-	
-	
-	public char getStdId() {
+
+
+
+
+	public char getStuID()
+	{
 		return StuID;
 	}
-	public int getStuGrade() {
-		return StuGrade;
+
+
+
+
+	public void setStuID(char stuID)
+	{
+		StuID = stuID;
 	}
-	public String getStuName() {
+
+
+
+
+	public String getStuName()
+	{
 		return StuName;
 	}
-	public String getClass_name() {
-		return Class_name;
-	}
-	public String getPro_name() {
-		return Pro_name;
-	}
-	
 
+
+
+
+	public void setStuName(String stuName)
+	{
+		StuName = stuName;
+	}
+
+
+
+
+	public int getStuGrade()
+	{
+		return StuGrade;
+	}
+
+
+
+
+	public void setStuGrade(int stuGrade)
+	{
+		StuGrade = stuGrade;
+	}
+
+
+
+
+	public String getClass_ID()
+	{
+		return Class_ID;
+	}
+
+
+
+
+	public void setClass_ID(String class_ID)
+	{
+		Class_ID = class_ID;
+	}
+    
 }
