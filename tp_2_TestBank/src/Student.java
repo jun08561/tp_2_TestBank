@@ -77,11 +77,5 @@ public class Student
 	}
 
 
-
-
-	public void setClass_ID(String class_ID)
-	{
-		Class_ID = class_ID;
-	}
     
 }
