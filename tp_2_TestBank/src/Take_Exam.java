@@ -4,14 +4,17 @@ import javax.swing.JTextField;
 import java.awt.Font;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 import java.awt.event.ActionEvent;
 
 public class Take_Exam extends ExamFrame{
 	private JTextField txtUserName;
 	private JTextField txtUserID;
 	private JTextField txtClassID;
-	
-	
+	Map<String, String> student_record = new HashMap<String, String>();
+ 	
 	public Take_Exam() {
 		super("taking Exam", 400, 500);
 		
@@ -25,6 +28,8 @@ public class Take_Exam extends ExamFrame{
 		JLabel txtStudentName = new JLabel("Name");
 		txtStudentName.setBounds(38, 85, 56, 16);
 		getContentPane().add(txtStudentName);
+		String name = txtStudentName.getText();
+		
 		
 		txtUserName = new JTextField();
 		txtUserName.setBounds(139, 82, 116, 22);
@@ -35,10 +40,14 @@ public class Take_Exam extends ExamFrame{
 		txtStudentID.setBounds(38, 138, 56, 16);
 		getContentPane().add(txtStudentID);
 		
+		
 		txtUserID = new JTextField();
 		txtUserID.setBounds(139, 135, 116, 22);
 		getContentPane().add(txtUserID);
 		txtUserID.setColumns(10);
+		String id = txtStudentID.getText();
+		
+		student_record.put(id, name);
 		
 		JLabel txtClass_ID = new JLabel("Class_ID");
 		txtClass_ID.setBounds(38, 195, 56, 16);
@@ -70,4 +79,9 @@ public class Take_Exam extends ExamFrame{
 		btnCancel.setBounds(219, 324, 97, 25);
 		getContentPane().add(btnCancel);
 	}
+	public Map<String, String> getrecord(){
+		return student_record;
+	}
+	
+
 }
