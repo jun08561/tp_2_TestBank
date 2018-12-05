@@ -1,6 +1,9 @@
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import java.awt.Font;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Take_Exam extends ExamFrame{
 	private JTextField txtUserName;
@@ -44,5 +47,16 @@ public class Take_Exam extends ExamFrame{
 		txtClassID.setBounds(139, 192, 116, 22);
 		getContentPane().add(txtClassID);
 		txtClassID.setColumns(10);
+		
+		JButton btnOK = new JButton("Login");
+		btnOK.addActionListener(e->{
+			
+		});
+		btnOK.setBounds(29, 324, 97, 25);
+		getContentPane().add(btnOK);
+		
+		JButton btnCancel = new JButton("Cancel");
+		btnCancel.setBounds(219, 324, 97, 25);
+		getContentPane().add(btnCancel);
 	}
 }
