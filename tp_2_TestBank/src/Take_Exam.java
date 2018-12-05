@@ -1,4 +1,5 @@
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import java.awt.Font;
 import javax.swing.JButton;
@@ -50,12 +51,22 @@ public class Take_Exam extends ExamFrame{
 		
 		JButton btnOK = new JButton("Login");
 		btnOK.addActionListener(e->{
+			System.out.println("Success!");
+			Exam_Taking tkExam_Taking = new Exam_Taking();
+			tkExam_Taking.setVisible(true);
+			this.setVisible(false);
 			
 		});
 		btnOK.setBounds(29, 324, 97, 25);
 		getContentPane().add(btnOK);
 		
 		JButton btnCancel = new JButton("Cancel");
+		btnCancel.addActionListener(e->{
+			System.out.println("Failure! Please try again");
+			JLabel label = new JLabel("Please try again");
+			JOptionPane.showMessageDialog(null, label, "Login failed", JOptionPane.ERROR_MESSAGE);
+			
+		});
 		btnCancel.setBounds(219, 324, 97, 25);
 		getContentPane().add(btnCancel);
 	}
