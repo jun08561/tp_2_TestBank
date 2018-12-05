@@ -3,7 +3,7 @@ public class MainApp {
 	public static Student student;
 	
 	public static void main(String[] args) {
-		Take_Exam exam = new Take_Exam();
+		Login_UI exam = new Login_UI();
 		exam.setVisible(true);
 	}
 

@@ -9,13 +9,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.awt.event.ActionEvent;
 
-public class Take_Exam extends ExamFrame{
+public class Login_UI extends ExamFrame_UI{
 	private JTextField txtUserName;
 	private JTextField txtUserID;
 	private JTextField txtClassID;
 	Map<String, String> student_record = new HashMap<String, String>();
  	
-	public Take_Exam() {
+	public Login_UI() {
 		super("taking Exam", 400, 500);
 		
 		getContentPane().setLayout(null);
@@ -61,7 +61,8 @@ public class Take_Exam extends ExamFrame{
 		JButton btnOK = new JButton("Login");
 		btnOK.addActionListener(e->{
 			System.out.println("Success!");
-			Exam_Taking tkExam_Taking = new Exam_Taking();
+			
+			Exam_UI tkExam_Taking = new Exam_UI();
 			tkExam_Taking.setVisible(true);
 			this.setVisible(false);
 			
@@ -82,6 +83,4 @@ public class Take_Exam extends ExamFrame{
 	public Map<String, String> getrecord(){
 		return student_record;
 	}
-	
-
 }
