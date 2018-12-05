@@ -1,10 +1,15 @@
 import javax.swing.JSeparator;
 import java.awt.BorderLayout;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import java.awt.Font;
+import java.awt.GridLayout;
 
 public class Exam_Taking extends ExamFrame{
+	public Get_Question question;
+	//String string= question.getQuestion();
+	
 	
 	public Exam_Taking() {
 		super("Taking Exam", 700, 1000);
@@ -16,5 +21,11 @@ public class Exam_Taking extends ExamFrame{
 		getContentPane().add(lblTakingExam);
 		
        
+	}
+	private JPanel examPanel() {
+		JPanel examPanel = new JPanel();
+		return null;
+		
+		
 	}
 }

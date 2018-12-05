@@ -1,54 +1,43 @@
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
 
-import java.util.ArrayList;
-import java.util.List;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
+
+
 public class Get_Question {
+	//private File inFile1; 
+//
+//    public static void main(String[] args) throws IOException {
+//    
+//   
+//   String fileName = "C:/Users/June/Desktop/Documents/test.txt";
+////    Scanner inFile1 = new Scanner(file);
+////    
+////    while(inFile1.hasNextLine()) {
+////    System.out.println(inFile1.nextLine());
+////    }
+//   
+//
+//
+// 
 
-    public static void main(String[] args) throws IOException {
+// }
     
-    String token1 = "";
-
-    
-    File file = new File("C:/Users/June/Desktop/Documents/freedom.txt");
-    Scanner inFile1 = new Scanner(file);
- 
-    List<String> temps = new ArrayList<String>();
-
-   
-    while (inFile1.hasNext()) {
-      
-      token1 = inFile1.next();
-      temps.add(token1);
+    public String getQuestion() throws FileNotFoundException {
+    	String str= "";   	  
+    	File file = new File("C:/Users/June/Desktop/Documents/test.txt");
+        Scanner inFile1 = new Scanner(file);
+        
+        while(inFile1.hasNextLine()) {
+        	   str += inFile1.nextLine();
+  
+        }
+        
+        return str;
+        
+    	
     }
-    inFile1.close();
-
-    String[] tempsArray = temps.toArray(new String[0]);
-
-//    System.out.print("The array: (");
-//	for(int i=0; i<tempsArray.length; i++) {
-//		if(i==tempsArray.length-1) {
-//		System.out.print(tempsArray[i]);}
-//		else {
-//			System.out.print(tempsArray[i]+",");
-//		}
-//		
-//		
-//	}
-//	System.out.print(")");
-//	System.out.print("The array: ( {");
-//	for(int i=0; i<tempsArray.length; i++) {
-//		if(i==tempsArray.length-1) {
-//		System.out.print("("+tempsArray[i]+")");}
-//		else {
-//			System.out.print("("+tempsArray[i]+")"+",");
-//		}
-//		
-//	}
-//	System.out.print("} )");
- }
 }
