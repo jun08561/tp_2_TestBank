@@ -64,6 +64,7 @@ public class Exam_UI extends ExamFrame_UI {
 		}
 		
 		JTextPane textPane = new JTextPane();
+		textPane.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		textPane.setText(str+"\n");
 		textPane.setBounds(53, 109, 531, 651);
 		getContentPane().add(textPane);
