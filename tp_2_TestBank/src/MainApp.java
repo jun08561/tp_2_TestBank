@@ -5,6 +5,7 @@ public class MainApp {
 	public static void main(String[] args) {
 		Login_UI exam = new Login_UI();
 		exam.setVisible(true);
+		
 	}
 
 }
